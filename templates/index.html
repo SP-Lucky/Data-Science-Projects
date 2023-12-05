@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Entry Form</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head> 
+<body>
+    <h2>TAX PAYERS DATA</h2>
+    
+    <form action="/submit" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+        
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company">
+        
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
+        
+        <label for="payment_date">Payment Date:</label>
+        <input type="text" id="payment_date" name="payment_date">
+        
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status">
+        
+        <label for="due_date">Due Date:</label>
+        <input type="text" id="due_date" name="due_date">
+        
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/summary" method="get">
+        <input type="submit" value="Summary">
+    </form>
+</body>
+
+</html>
